@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:movie_admin/widgets/clip_path.dart';
+import 'package:movie_admin/utils/widgets/clip_path.dart';
 
 void pClipPath() {
   testWidgets(

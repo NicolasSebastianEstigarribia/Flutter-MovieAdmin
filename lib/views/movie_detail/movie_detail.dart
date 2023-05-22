@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:movie_admin/models/movie.dart';
-import 'package:movie_admin/services/api_utils.dart';
-import 'package:movie_admin/utils/functions.dart';
+import 'package:movie_admin/services/movie_detail_services.dart';
 import 'package:movie_admin/view_models/movie_detail_model.dart';
 import 'package:movie_admin/views/movie_detail/body_movie_detail.dart';
 import 'package:movie_admin/views/movie_detail/floating_movie_detail.dart';
-import 'package:movie_admin/widgets/spinner_widget.dart';
+import 'package:movie_admin/utils/widgets/spinner_widget.dart';
 import 'package:provider/provider.dart';
 
 class MovieDetail extends StatefulWidget {
@@ -20,20 +18,8 @@ class MovieDetail extends StatefulWidget {
 class _MovieDetailState extends State<MovieDetail> {
   @override
   void initState() {
-    getData();
+    MovieDetailServices.getData(context, widget.imdbID);
     super.initState();
-  }
-
-  Future<void> getData() async {
-    String apiKey = getApiKey();
-    String url = 'https://www.omdbapi.com/?apikey=$apiKey&i=${widget.imdbID}';
-
-    final response = await fetchResponse(url);
-    Movie movieObtained = Movie.fromJson(response);
-    if (context.mounted) {
-      Provider.of<MoviesDetailModel>(context, listen: false)
-          .updateMovie(movieObtained);
-    }
   }
 
   @override
@@ -47,7 +33,9 @@ class _MovieDetailState extends State<MovieDetail> {
                   imdbIdToRemove: viewModel.movie!.imdbID!,
                 ),
               )
-            : const Scaffold(body: SpinnerWidget());
+            : const Scaffold(
+                body: SpinnerWidget(),
+              );
       },
     );
   }

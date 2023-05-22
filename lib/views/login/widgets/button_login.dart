@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:movie_admin/utils/colors.dart';
+import 'package:movie_admin/utils/constants.dart';
 import 'package:movie_admin/view_models/auth_model.dart';
-import 'package:movie_admin/widgets/spinner_widget.dart';
+import 'package:movie_admin/utils/widgets/spinner_widget.dart';
 import 'package:provider/provider.dart';
 
 class ButtonLogin extends StatelessWidget {

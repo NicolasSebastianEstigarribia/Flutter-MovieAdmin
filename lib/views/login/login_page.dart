@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:movie_admin/services/dummy_backend.dart';
+import 'package:movie_admin/services/login_services.dart';
+
 import 'package:movie_admin/view_models/auth_model.dart';
 
 import 'package:movie_admin/views/login/resourse/header_login.dart';
@@ -28,13 +29,13 @@ class _LoginPageState extends State<LoginPage> {
       _formKey.currentState!.save();
       // Simulamos una llamada a la API de inicio de sesión
       final response =
-          await loginRequest(_emailController.text, _passwordController.text);
+          await LoginService.loginRequest(_emailController.text, _passwordController.text);
 
       if (context.mounted) {
         if (response.statusCode == 200) {
           final jsonResponse = json.decode(response.body);
 
-          if (validApiResponse(context, jsonResponse)) {
+          if (LoginService.validApiResponse(context, jsonResponse)) {
             Provider.of<AuthViewModel>(context, listen: false).login();
           }
         } else {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movie_admin/widgets/network_image.dart';
+import 'package:movie_admin/utils/widgets/network_image.dart';
 
 class PosterMovie extends StatelessWidget {
   const PosterMovie({

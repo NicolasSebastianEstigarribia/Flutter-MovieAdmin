@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:movie_admin/utils/colors.dart';
-import 'package:movie_admin/widgets/clip_path.dart';
+import 'package:movie_admin/utils/constants.dart';
+import 'package:movie_admin/utils/widgets/clip_path.dart';
 
 class HeaderLoginPage extends StatelessWidget {
   const HeaderLoginPage({
@@ -33,8 +33,8 @@ class HeaderLoginPage extends StatelessWidget {
               lightBlue,
               darkBlue,
             ],
-            child: Column(
-              children: const <Widget>[
+            child: const Column(
+              children: <Widget>[
                 SizedBox(
                   height: 40,
                 ),

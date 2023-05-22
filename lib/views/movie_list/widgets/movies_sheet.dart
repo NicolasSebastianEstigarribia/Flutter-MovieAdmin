@@ -4,7 +4,7 @@ import 'package:movie_admin/models/movies.dart';
 import 'package:movie_admin/view_models/movie_detail_model.dart';
 import 'package:movie_admin/view_models/movie_list_model.dart';
 import 'package:movie_admin/views/movie_detail/movie_detail.dart';
-import 'package:movie_admin/widgets/network_image.dart';
+import 'package:movie_admin/utils/widgets/network_image.dart';
 import 'package:provider/provider.dart';
 
 class MovieSheet extends StatelessWidget {

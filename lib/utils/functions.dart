@@ -1,10 +1,6 @@
 
 import 'package:flutter/material.dart';
 
-String getApiKey() {
-  return "14fd113c";
-}
-
 List<String> separateWords(String str) {
   if (str.isEmpty) {
     return [];

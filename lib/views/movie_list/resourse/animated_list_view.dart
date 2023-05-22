@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:movie_admin/models/movies.dart';
 import 'package:movie_admin/views/movie_list/widgets/movies_sheet.dart';
-import 'package:movie_admin/widgets/network_image.dart';
+import 'package:movie_admin/utils/widgets/network_image.dart';
 
 class AnimateListView extends StatefulWidget {
   final List<Search> movies;
