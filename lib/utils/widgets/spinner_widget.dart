@@ -8,12 +8,12 @@ class SpinnerWidget extends StatelessWidget {
     return Center(
       child: Container(
           alignment: AlignmentDirectional.bottomCenter,
-          child: Column(
+          child: const Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Column(
-                children: const [
+                children: [
                   CircularProgressIndicator(),
                 ],
               )

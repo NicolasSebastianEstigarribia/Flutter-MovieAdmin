@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:movie_admin/services/login_services.dart';
+import 'package:movie_admin/utils/widgets/snack_bar.dart';
 
 import 'package:movie_admin/view_models/auth_model.dart';
 
@@ -9,7 +10,6 @@ import 'package:movie_admin/views/login/widgets/button_login.dart';
 import 'package:movie_admin/views/login/widgets/text_field_login.dart';
 import 'package:provider/provider.dart';
 
-import '../../utils/functions.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);

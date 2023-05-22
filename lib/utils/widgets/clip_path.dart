@@ -22,7 +22,7 @@ class PClipPath extends StatelessWidget {
         decoration: BoxDecoration(
           gradient: LinearGradient(colors: colors),
         ),
-        child: child ?? Column(),
+        child: child ?? const Column(),
       ),
     );
   }

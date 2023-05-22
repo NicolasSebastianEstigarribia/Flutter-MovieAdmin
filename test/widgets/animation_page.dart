@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:movie_admin/utils/animation_page.dart';
+import 'package:movie_admin/utils/widgets/animation_page.dart';
 
 void animationPageWidgetTest() {
 
